@@ -67,34 +67,49 @@
 
 .hero-main-title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6.2vw, 5.25rem);
+  font-size: clamp(2.35rem, 6vw, 5.25rem);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.08;
   letter-spacing: -0.04em;
   color: var(--text-primary);
   max-width: 980px;
   margin: 0 auto;
+  text-wrap: balance;
 }
 
 .hero-sub-copy {
-  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 740px;
   margin: 0 auto;
+  text-wrap: balance;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 18px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .home-hero-center-wrap .hero-cta-group {
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* Subpage Hero Grid Layout (Services, Solutions, Careers) */
@@ -112,55 +127,6 @@
     grid-template-columns: 1.15fr 0.85fr;
     gap: 64px;
   }
-}
-
-/* Unique Floating Capability Micro-Dock */
-.hero-capability-dock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 36px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: var(--radius-pill);
-  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(0, 136, 204, 0.08);
-}
-
-.hero-dock-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  transition: all var(--transition-fast);
-}
-
-.hero-dock-item:hover {
-  background: rgba(0, 136, 204, 0.08);
-  color: var(--brand-cyan);
-}
-
-.hero-dock-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--brand-cyan);
-}
-
-.hero-dock-divider {
-  width: 1px;
-  height: 14px;
-  background: var(--border-light);
 }
 
 /* Floating Layer Badges */
@@ -361,6 +327,19 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .asymmetric-card-wide {
+    padding: 28px 20px;
+    gap: 24px;
+    border-radius: var(--radius-lg);
+  }
+
+  .asymmetric-card-tall {
+    padding: 28px 20px;
+    border-radius: var(--radius-lg);
+  }
+}
+
 .asymmetric-card-wide:hover,
 .asymmetric-card-tall:hover {
   transform: translateY(-5px);
@@ -501,6 +480,13 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .trust-stat-card {
+    padding: 36px 24px;
+    border-radius: var(--radius-lg);
+  }
+}
+
 .trust-stat-card::before {
   content: '';
   position: absolute;
@@ -587,9 +573,15 @@
   .solutions-rail-list {
     flex-direction: row;
     overflow-x: auto;
-    padding-bottom: 8px;
-    gap: 8px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 8px;
+    gap: 10px;
+  }
+
+  .solutions-rail-list::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -609,9 +601,9 @@
 
 @media (max-width: 768px) {
   .solution-rail-item {
-    min-width: 200px;
+    min-width: 220px;
     flex-shrink: 0;
-    padding: 14px 16px;
+    padding: 16px 18px;
   }
 }
 
@@ -823,7 +815,7 @@
   position: sticky;
   top: var(--header-height);
   z-index: 90;
-  background: rgba(251, 251, 249, 0.92);
+  background: rgba(251, 251, 249, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid var(--border-subtle);
@@ -832,13 +824,29 @@
   transition: top var(--transition-normal);
 }
 
+.site-header.scrolled ~ main .sticky-service-nav-wrap {
+  top: var(--header-height-scrolled);
+}
+
+@media (max-width: 768px) {
+  .sticky-service-nav-wrap {
+    padding: 8px 0;
+  }
+}
+
 .service-subnav-list {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 4px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px;
+}
+
+.service-subnav-list::-webkit-scrollbar {
+  display: none;
 }
 
 .service-subnav-item {
@@ -855,7 +863,15 @@
   color: var(--text-secondary);
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: all var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .service-subnav-item {
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
 }
 
 .service-subnav-item:hover {
@@ -1296,6 +1312,13 @@
   box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
 }
 
+@media (max-width: 768px) {
+  .careers-contact-box {
+    padding: 28px 20px;
+    border-radius: var(--radius-xl);
+  }
+}
+
 /* --------------------------------------------------------------------------
    13. NEWSLETTER EDITORIAL CONTAINER
    -------------------------------------------------------------------------- */
@@ -1320,6 +1343,13 @@
   overflow: hidden;
   border-top: 1px solid rgba(14, 165, 233, 0.22);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .section-contact-cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 .section-contact-cta::before {

@@ -43,46 +43,80 @@ export function renderHeader() {
           <span></span>
         </button>
       </div>
+    </header>
 
-      <!-- Mobile Navigation Drawer -->
-      <div class="mobile-nav-overlay js-mobile-nav">
+    <!-- Mobile Navigation Drawer outside header -->
+    <div class="mobile-nav-overlay js-mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-header">
+          <span class="brand-text" style="font-size: 1.25rem;">REVOLUTION <span style="color: var(--brand-cyan);">6</span></span>
+          <button class="mobile-nav-close js-mobile-close" aria-label="Close menu">✕</button>
+        </div>
         <div class="mobile-nav-links">
           <a href="/" class="mobile-nav-link" data-route="/">Home</a>
           <a href="/services" class="mobile-nav-link" data-route="/services">Services</a>
           <a href="/solutions" class="mobile-nav-link" data-route="/solutions">Solutions</a>
           <a href="/careers" class="mobile-nav-link" data-route="/careers">Careers</a>
         </div>
-        <button class="btn btn-cyan js-open-contact-modal mobile-cta-btn" style="width: 100%;">
-          <span>Get In Touch</span>
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
+        <div style="margin-top: auto; padding-top: 24px;">
+          <button class="btn btn-cyan js-open-contact-modal mobile-cta-btn" style="width: 100%;">
+            <span>Get In Touch</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
       </div>
-    </header>
+    </div>
   `;
 }
 
 export function initHeaderEvents() {
   const toggle = document.querySelector('.js-mobile-toggle');
   const overlay = document.querySelector('.js-mobile-nav');
+  const closeBtn = document.querySelector('.js-mobile-close');
 
   if (toggle && overlay) {
-    toggle.addEventListener('click', () => {
-      const isOpen = toggle.classList.toggle('open');
-      overlay.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    const setMenuOpen = (open) => {
+      toggle.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = !overlay.classList.contains('open');
+      setMenuOpen(isOpen);
     });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setMenuOpen(false);
+      });
+    }
 
     // Close when link clicked
     overlay.querySelectorAll('.mobile-nav-link, .mobile-cta-btn').forEach(link => {
       link.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        overlay.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        setMenuOpen(false);
       });
+    });
+
+    // Close when clicking on backdrop
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        setMenuOpen(false);
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) {
+        setMenuOpen(false);
+      }
     });
   }
 }

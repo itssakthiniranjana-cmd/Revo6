@@ -31,6 +31,14 @@
   padding-right: 24px;
 }
 
+@media (max-width: 480px) {
+  .container,
+  .container-narrow {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
 /* Section Spatial Rules */
 .section {
   position: relative;

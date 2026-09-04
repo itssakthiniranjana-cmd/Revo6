@@ -44,24 +44,6 @@ export function renderHome() {
                   <span>Inquire Directly</span>
                 </button>
               </div>
-
-              <!-- Unique Capability Micro-Dock -->
-              <div class="hero-capability-dock">
-                <a href="/services#accounting" class="hero-dock-item">
-                  <span class="hero-dock-dot"></span>
-                  <span>FINTECH & ACCOUNTING</span>
-                </a>
-                <span class="hero-dock-divider"></span>
-                <a href="/services#software" class="hero-dock-item">
-                  <span class="hero-dock-dot"></span>
-                  <span>ENTERPRISE SOFTWARE</span>
-                </a>
-                <span class="hero-dock-divider"></span>
-                <a href="/services#wms" class="hero-dock-item">
-                  <span class="hero-dock-dot"></span>
-                  <span>WMS & SUPPLY CHAIN</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
