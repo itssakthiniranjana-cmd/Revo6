@@ -25,7 +25,7 @@ export function renderCareers() {
           <div class="home-hero-layout">
             <!-- Left: Hero Details -->
             <div class="reveal-on-scroll">
-              <h1 class="hero-main-title" style="margin-top: 0; margin-bottom: 20px;">
+              <h1 class="hero-main-title" style="margin-top: 0; margin-bottom: 20px; white-space: nowrap; font-size: clamp(2rem, 3.8vw, 3.75rem);">
                 ${careers.hero.title}
               </h1>
               <p class="hero-sub-copy" style="margin-bottom: 28px;">
