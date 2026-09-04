@@ -91,10 +91,6 @@ export function renderServices() {
           <div class="service-chapter-grid">
             <!-- Details -->
             <div class="reveal-on-scroll">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px; letter-spacing: 0.08em;">
-                01 / FINTECH / BOOKKEEPING & REPORTING
-              </div>
-
               <h2 class="chapter-large-title">Accounting</h2>
 
               <p class="chapter-lead-quote">
@@ -172,10 +168,6 @@ export function renderServices() {
           <div class="service-chapter-grid layout-reversed">
             <!-- Details -->
             <div class="reveal-on-scroll">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px; letter-spacing: 0.08em;">
-                02 / ENGINEERING / SOFTWARE ARCHITECTURE
-              </div>
-
               <h2 class="chapter-large-title">Software</h2>
 
               <p class="chapter-lead-quote">
@@ -253,10 +245,6 @@ export function renderServices() {
           <div class="service-chapter-grid">
             <!-- Details -->
             <div class="reveal-on-scroll">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px; letter-spacing: 0.08em;">
-                03 / LOGISTICS / SUPPLY CHAIN AUTOMATION
-              </div>
-
               <h2 class="chapter-large-title">Warehouse Management (WMS)</h2>
 
               <p class="chapter-lead-quote">

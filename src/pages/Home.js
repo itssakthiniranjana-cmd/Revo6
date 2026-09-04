@@ -128,9 +128,6 @@ export function renderHome() {
             <!-- 1. Wide Asymmetrical Hero Card: Accounting -->
             <div class="asymmetric-card-wide reveal-on-scroll">
               <div>
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: 0.875rem; font-weight: 700; color: var(--brand-cyan);">01 / FINTECH</span>
-                </div>
                 <h3 class="card-title" style="font-size: 2rem; margin-bottom: 16px;">Accounting</h3>
                 <p class="text-lead" style="margin-bottom: 16px; color: var(--text-primary); font-weight: 600;">
                   Accurate financial management tailored to your business needs.
@@ -153,9 +150,6 @@ export function renderHome() {
             <!-- 2. Tall Card: Software -->
             <div class="asymmetric-card-tall reveal-on-scroll reveal-stagger-1">
               <div>
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: 0.875rem; font-weight: 700; color: var(--brand-cyan);">02 / ENGINEERING</span>
-                </div>
                 <div class="service-card-media" style="margin-bottom: 24px;">
                   <img src="/assets/images/software.jpg" alt="Software Consulting" />
                 </div>
@@ -173,9 +167,6 @@ export function renderHome() {
             <!-- 3. Tall Card: WMS -->
             <div class="asymmetric-card-tall reveal-on-scroll reveal-stagger-2">
               <div>
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                  <span style="font-family: var(--font-mono); font-size: 0.875rem; font-weight: 700; color: var(--brand-cyan);">03 / SUPPLY CHAIN</span>
-                </div>
                 <div class="service-card-media" style="margin-bottom: 24px;">
                   <img src="/assets/images/wms.jpg" alt="Warehouse Management Systems" />
                 </div>
@@ -322,9 +313,6 @@ export function renderHome() {
         <div class="container">
           <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;" class="reveal-on-scroll">
             <div style="max-width: 680px;">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); letter-spacing: 0.08em; margin-bottom: 8px;">
-                TRANSFORMATION ARCHITECTURE
-              </div>
               <h2 class="section-title" style="margin-bottom: 12px;">
                 Our Solutions
               </h2>
@@ -347,25 +335,21 @@ export function renderHome() {
             <!-- Left Rail: Chapter Selectors -->
             <div class="solutions-rail-list" role="tablist" aria-label="Solutions Chapters">
               <div class="solution-rail-item js-solution-tab active" data-target="panel-accounting" role="tab" aria-selected="true" tabindex="0">
-                <span class="solution-rail-num">01 / FINTECH</span>
                 <span class="solution-rail-title">Accounting Streamline</span>
                 <span class="solution-rail-summary">Simplified financial processes for clarity.</span>
               </div>
 
               <div class="solution-rail-item js-solution-tab" data-target="panel-software" role="tab" aria-selected="false" tabindex="0">
-                <span class="solution-rail-num">02 / ENGINEERING</span>
                 <span class="solution-rail-title">Software Consulting</span>
                 <span class="solution-rail-summary">Tailored tech solutions boosting efficiency.</span>
               </div>
 
               <div class="solution-rail-item js-solution-tab" data-target="panel-wms" role="tab" aria-selected="false" tabindex="0">
-                <span class="solution-rail-num">03 / LOGISTICS</span>
                 <span class="solution-rail-title">WMS Optimization</span>
                 <span class="solution-rail-summary">Enhanced warehouse processes saving time.</span>
               </div>
 
               <div class="solution-rail-item js-solution-tab" data-target="panel-digital" role="tab" aria-selected="false" tabindex="0">
-                <span class="solution-rail-num">04 / TRANSFORMATION</span>
                 <span class="solution-rail-title">Digital Change</span>
                 <span class="solution-rail-summary">Driving smooth tech transitions daily.</span>
               </div>
@@ -377,7 +361,6 @@ export function renderHome() {
               <div id="panel-accounting" class="solution-stage-panel js-solution-panel active" role="tabpanel">
                 <div>
                   <div class="solution-stage-header">
-                    <span class="solution-stage-meta">CHAPTER 01 / FINANCIAL PRECISION & REPORTING</span>
                     <h3 class="solution-stage-title">Accounting Streamline</h3>
                   </div>
                   <div class="solution-stage-quote">
@@ -422,7 +405,6 @@ export function renderHome() {
               <div id="panel-software" class="solution-stage-panel js-solution-panel" role="tabpanel">
                 <div>
                   <div class="solution-stage-header">
-                    <span class="solution-stage-meta">CHAPTER 02 / BESPOKE TECH ARCHITECTURE</span>
                     <h3 class="solution-stage-title">Software Consulting</h3>
                   </div>
                   <div class="solution-stage-quote">
@@ -467,7 +449,6 @@ export function renderHome() {
               <div id="panel-wms" class="solution-stage-panel js-solution-panel" role="tabpanel">
                 <div>
                   <div class="solution-stage-header">
-                    <span class="solution-stage-meta">CHAPTER 03 / SUPPLY CHAIN VELOCITY</span>
                     <h3 class="solution-stage-title">WMS Optimization</h3>
                   </div>
                   <div class="solution-stage-quote">
@@ -512,7 +493,6 @@ export function renderHome() {
               <div id="panel-digital" class="solution-stage-panel js-solution-panel" role="tabpanel">
                 <div>
                   <div class="solution-stage-header">
-                    <span class="solution-stage-meta">CHAPTER 04 / CONTINUOUS MODERNIZATION</span>
                     <h3 class="solution-stage-title">Digital Change</h3>
                   </div>
                   <div class="solution-stage-quote">

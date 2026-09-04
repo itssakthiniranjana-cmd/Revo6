@@ -46,21 +46,21 @@ export const siteContent = {
         ctaLink: "/services",
         pillars: [
           {
-            tag: "01 / FINTECH & COMPLIANCE",
+            tag: "FINTECH & COMPLIANCE",
             title: "Accounting",
             highlight: "Streamline your financial operations efficiently",
             description: "Accurate reporting tailored to your needs",
             detail: "Expert support for complex accounting challenges"
           },
           {
-            tag: "02 / ENTERPRISE ENGINEERING",
+            tag: "ENTERPRISE ENGINEERING",
             title: "Software",
             highlight: "Consulting to optimize your software and enhance performance",
             description: "Modern architecture tailored to scale your digital capabilities",
             detail: "Custom integrations driving engineering velocity"
           },
           {
-            tag: "03 / OPERATIONS & LOGISTICS",
+            tag: "OPERATIONS & LOGISTICS",
             title: "WMS",
             highlight: "Streamlining workflows with smart technology solutions",
             description: "Real-time warehouse optimization and supply chain orchestration",

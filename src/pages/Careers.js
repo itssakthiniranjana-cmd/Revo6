@@ -90,7 +90,6 @@ export function renderCareers() {
           <!-- Verified Practice Areas -->
           <div class="grid-3-col" style="margin-top: 56px;">
             <div class="card-editorial reveal-on-scroll reveal-stagger-1" style="padding: 36px 28px;">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px;">01 / FINTECH</div>
               <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 12px;">Accounting</h3>
               <p class="text-body" style="color: var(--text-secondary);">
                 Simplify financial operations with expert bookkeeping, reporting, and precision management.
@@ -98,7 +97,6 @@ export function renderCareers() {
             </div>
 
             <div class="card-editorial reveal-on-scroll reveal-stagger-2" style="padding: 36px 28px;">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px;">02 / ENGINEERING</div>
               <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 12px;">Software</h3>
               <p class="text-body" style="color: var(--text-secondary);">
                 Optimize technology with custom software consulting, modern integrations, and enhanced performance.
@@ -106,7 +104,6 @@ export function renderCareers() {
             </div>
 
             <div class="card-editorial reveal-on-scroll reveal-stagger-3" style="padding: 36px 28px;">
-              <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--brand-cyan); margin-bottom: 12px;">03 / LOGISTICS</div>
               <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 12px;">WMS</h3>
               <p class="text-body" style="color: var(--text-secondary);">
                 Streamline warehouse operations, cut fulfillment delays, and optimize supply chain technology.

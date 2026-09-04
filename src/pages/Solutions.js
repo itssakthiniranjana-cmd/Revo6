@@ -135,15 +135,6 @@ export function renderSolutions() {
             <div class="solutions-chapters-stream">
               ${solutions.solutionsGrid.map((sol, idx) => `
                 <article id="${sol.id}" class="solution-story-panel js-solution-chapter reveal-on-scroll">
-                  <!-- Header -->
-                  <div class="solution-story-header">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span class="solution-number">CHAPTER ${sol.number}</span>
-                      <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--brand-cyan); letter-spacing: 0.06em;">${sol.focus}</span>
-                    </div>
-                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">TRANSFORMATION ARCHITECTURE</span>
-                  </div>
-
                   <div>
                     <h2 class="solution-story-title">${sol.title}</h2>
                     <p class="solution-story-lead" style="margin-top: 14px;">
