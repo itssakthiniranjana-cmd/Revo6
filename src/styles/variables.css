@@ -1,0 +1,78 @@
+:root {
+  /* Color Palette - Premium Editorial Light Mode */
+  --bg-canvas: #FBFBF9;
+  --bg-canvas-subtle: #F4F5F2;
+  --bg-surface: #FFFFFF;
+  --bg-surface-raised: #FFFFFF;
+  --bg-surface-glass: rgba(255, 255, 255, 0.82);
+  --bg-surface-hover: #F8FAFC;
+  --bg-surface-dark: #0B1120;
+
+  /* Typography Colors */
+  --text-primary: #0A0F1D;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-inverse: #FFFFFF;
+  --text-inverse-muted: #94A3B8;
+
+  /* Brand Accents */
+  --brand-cyan: #0088CC;
+  --brand-cyan-light: #0EA5E9;
+  --brand-cyan-dim: rgba(14, 165, 233, 0.08);
+  --brand-cyan-border: rgba(14, 165, 233, 0.25);
+  --brand-blue: #2563EB;
+  --brand-navy: #0F172A;
+  --brand-glow: 0 0 35px rgba(14, 165, 233, 0.18);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --border-light: rgba(15, 23, 42, 0.10);
+  --border-medium: rgba(15, 23, 42, 0.16);
+  --border-focus: #0088CC;
+  --border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 24px 48px -8px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  --shadow-card-hover: 0 24px 48px -12px rgba(0, 136, 204, 0.12), 0 0 1px rgba(15, 23, 42, 0.08);
+
+  /* Typography Tokens */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Font Scales */
+  --font-hero: clamp(2.75rem, 5.5vw, 4.75rem);
+  --font-h1: clamp(2.25rem, 4vw, 3.5rem);
+  --font-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --font-h3: clamp(1.35rem, 2.2vw, 1.75rem);
+  --font-h4: clamp(1.15rem, 1.6vw, 1.35rem);
+  --font-lead: clamp(1.05rem, 1.25vw, 1.25rem);
+  --font-body-regular: 1rem;
+  --font-body-small: 0.875rem;
+  --font-micro: 0.75rem;
+
+  /* Layout Dimensions */
+  --container-max-width: 1360px;
+  --container-narrow-width: 960px;
+  --header-height: 84px;
+  --header-height-scrolled: 72px;
+
+  /* Radius Tokens */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Transitions & Animation Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s var(--ease-out-expo);
+  --transition-normal: 0.35s var(--ease-out-expo);
+  --transition-slow: 0.6s var(--ease-out-expo);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
