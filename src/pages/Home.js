@@ -693,18 +693,34 @@ export function initHomeEvents() {
   const heroVideo = document.querySelector('.js-hero-video');
   if (heroVideo) {
     heroVideo.muted = true;
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Fallback or retry on user touch if strict low-power mode applies
-        const handleUserInteraction = () => {
-          heroVideo.play().catch(() => {});
-          window.removeEventListener('touchstart', handleUserInteraction);
-          window.removeEventListener('click', handleUserInteraction);
-        };
-        window.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true });
-        window.addEventListener('click', handleUserInteraction, { once: true, passive: true });
-      });
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    
+    const playVideo = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn('Hero video autoplay deferred:', err);
+        });
+      }
+    };
+
+    if (heroVideo.readyState >= 2) {
+      playVideo();
+    } else {
+      heroVideo.addEventListener('loadedmetadata', playVideo, { once: true });
+      heroVideo.addEventListener('canplay', playVideo, { once: true });
     }
+
+    // Interaction fallback for low-power and restricted browser modes
+    const unlockPlay = () => {
+      heroVideo.play().catch(() => {});
+      window.removeEventListener('touchstart', unlockPlay);
+      window.removeEventListener('click', unlockPlay);
+      window.removeEventListener('scroll', unlockPlay);
+    };
+    window.addEventListener('touchstart', unlockPlay, { once: true, passive: true });
+    window.addEventListener('click', unlockPlay, { once: true, passive: true });
+    window.addEventListener('scroll', unlockPlay, { once: true, passive: true });
   }
 }

@@ -39,8 +39,9 @@
   padding-top: calc(var(--header-height) + clamp(30px, 5vw, 70px));
   padding-bottom: clamp(70px, 8vw, 120px);
   overflow: hidden;
-  background: var(--bg-canvas);
-  border-bottom: 1px solid var(--border-subtle);
+  background: #070B14;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Hero Background Video */
@@ -53,6 +54,7 @@
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+  background: #070B14;
 }
 
 .hero-background-video {
@@ -65,9 +67,9 @@
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  opacity: 0.32;
-  filter: brightness(0.95) contrast(1.08) saturate(1.15);
-  transition: opacity var(--transition-slow);
+  opacity: 0.80;
+  filter: brightness(1.05) contrast(1.15) saturate(1.25);
+  transition: opacity 0.6s ease;
 }
 
 .hero-video-overlay {
@@ -77,9 +79,55 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 50% 25%, rgba(251, 251, 249, 0.72) 0%, rgba(251, 251, 249, 0.88) 60%, var(--bg-canvas) 100%),
-    linear-gradient(180deg, rgba(251, 251, 249, 0.40) 0%, rgba(251, 251, 249, 0.90) 100%);
+    radial-gradient(circle at 50% 35%, rgba(7, 11, 20, 0.40) 0%, rgba(7, 11, 20, 0.72) 65%, #070B14 100%),
+    linear-gradient(180deg, rgba(7, 11, 20, 0.25) 0%, rgba(7, 11, 20, 0.85) 85%, #070B14 100%);
   pointer-events: none;
+}
+
+.home-hero .hero-main-title {
+  color: #FFFFFF;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.home-hero .hero-sub-copy {
+  color: #CBD5E1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.home-hero .btn-primary {
+  background: var(--brand-cyan);
+  border-color: var(--brand-cyan);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px -4px rgba(0, 136, 204, 0.5);
+}
+
+.home-hero .btn-primary:hover {
+  background: #0077B3;
+  border-color: #0077B3;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(0, 136, 204, 0.65);
+}
+
+.home-hero .btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.home-hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.home-hero .hero-scroll-indicator {
+  color: #94A3B8;
+}
+
+.home-hero .scroll-indicator-mouse {
+  border-color: #64748B;
 }
 
 .home-hero-center-wrap {
