@@ -81,6 +81,7 @@
   background: 
     radial-gradient(circle at 50% 35%, rgba(7, 11, 20, 0.40) 0%, rgba(7, 11, 20, 0.72) 65%, #070B14 100%),
     linear-gradient(180deg, rgba(7, 11, 20, 0.25) 0%, rgba(7, 11, 20, 0.85) 85%, #070B14 100%);
+  opacity: 0.72;
   pointer-events: none;
 }
 
