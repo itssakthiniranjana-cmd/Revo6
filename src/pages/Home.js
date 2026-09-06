@@ -15,11 +15,28 @@ export function renderHome() {
            01. HERO SECTION
            =================================================================== -->
       <section class="home-hero">
+        <!-- Video Background Layer with Autoplay, Muted, Loop, Playsinline -->
+        <div class="hero-video-container" aria-hidden="true">
+          <video 
+            class="hero-background-video js-hero-video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="auto"
+            poster="/assets/images/hero_abstract.jpg"
+          >
+            <source src="/assets/videos/hero_background.mp4" type="video/mp4" />
+          </video>
+          <!-- Ambient overlay gradient for crystal clear text legibility -->
+          <div class="hero-video-overlay"></div>
+        </div>
+
         <!-- Parallax Ambient Depth Layers -->
         <div class="bg-ambient-layer">
           <div class="ambient-grid"></div>
-          <div class="ambient-orb orb-1" data-parallax-speed="0.14" style="opacity: 0.25; top: -5%; right: 20%;"></div>
-          <div class="ambient-orb orb-2" data-parallax-speed="-0.18" style="opacity: 0.20; top: 30%; left: 15%;"></div>
+          <div class="ambient-orb orb-1" data-parallax-speed="0.14" style="opacity: 0.18; top: -5%; right: 20%;"></div>
+          <div class="ambient-orb orb-2" data-parallax-speed="-0.18" style="opacity: 0.15; top: 30%; left: 15%;"></div>
         </div>
 
         <div class="container" style="position: relative; z-index: 2;">
@@ -670,5 +687,24 @@ export function initHomeEvents() {
     }, { threshold: 0.2 });
 
     counters.forEach(c => counterObserver.observe(c));
+  }
+
+  // Hero Video Autoplay Assurance
+  const heroVideo = document.querySelector('.js-hero-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback or retry on user touch if strict low-power mode applies
+        const handleUserInteraction = () => {
+          heroVideo.play().catch(() => {});
+          window.removeEventListener('touchstart', handleUserInteraction);
+          window.removeEventListener('click', handleUserInteraction);
+        };
+        window.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true });
+        window.addEventListener('click', handleUserInteraction, { once: true, passive: true });
+      });
+    }
   }
 }
