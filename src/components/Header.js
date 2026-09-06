@@ -8,14 +8,7 @@ export function renderHeader() {
       <div class="container nav-inner">
         <!-- Logo -->
         <a href="/" class="brand-logo" aria-label="Revolution 6 Home">
-          <div class="brand-logo-mark">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="42" stroke="#0088CC" stroke-width="9" stroke-linecap="round" stroke-dasharray="190 70" />
-              <circle cx="50" cy="50" r="20" stroke="#0088CC" stroke-width="9" />
-              <path d="M48 30C48 30 50 18 64 12" stroke="#0088CC" stroke-width="9" stroke-linecap="round" />
-            </svg>
-          </div>
-          <span class="brand-text">REVOLUTION <span>6</span></span>
+          <img src="/assets/images/logo.png" alt="Revolution 6" class="brand-logo-img" />
         </a>
 
         <!-- Desktop Nav -->
@@ -49,7 +42,9 @@ export function renderHeader() {
     <div class="mobile-nav-overlay js-mobile-nav" aria-hidden="true">
       <div class="mobile-nav-content">
         <div class="mobile-nav-header">
-          <span class="brand-text" style="font-size: 1.25rem;">REVOLUTION <span style="color: var(--brand-cyan);">6</span></span>
+          <a href="/" class="brand-logo" aria-label="Revolution 6 Home">
+            <img src="/assets/images/logo.png" alt="Revolution 6" class="brand-logo-img" />
+          </a>
           <button class="mobile-nav-close js-mobile-close" aria-label="Close menu">✕</button>
         </div>
         <div class="mobile-nav-links">

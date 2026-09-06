@@ -17,15 +17,8 @@ export function renderFooter() {
         <div class="footer-top">
           <!-- Brand Column -->
           <div class="footer-brand">
-            <a href="/" class="brand-logo" style="color: #FFFFFF;">
-              <div class="brand-logo-mark">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="42" stroke="#0088CC" stroke-width="9" stroke-linecap="round" stroke-dasharray="190 70" />
-                  <circle cx="50" cy="50" r="20" stroke="#0088CC" stroke-width="9" />
-                  <path d="M48 30C48 30 50 18 64 12" stroke="#0088CC" stroke-width="9" stroke-linecap="round" />
-                </svg>
-              </div>
-              <span class="brand-text">REVOLUTION <span>6</span></span>
+            <a href="/" class="brand-logo" aria-label="Revolution 6 Home">
+              <img src="/assets/images/logo-white.png" alt="Revolution 6" class="brand-logo-img" />
             </a>
             <p class="footer-subtitle">${brand.contact.subtitle}</p>
           </div>
